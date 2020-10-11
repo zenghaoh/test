@@ -61,3 +61,52 @@ cat error.dat
 cat -n error.dat  
    
  
+
+
+
+
+
+vi 1-2.c
+ls -l 1-2.c
+chmod 777 1-2.c
+ls -l  1-2.c
+./1-2.c
+file 1-2.c
+chmod 777 1-2.sh
+./1-2.sh
+
+file 1-2.sh
+chmod 664 1-2.c
+gcc -E 1-2.c -o 1-2.i
+cat -n 1-2.i
+gcc -S 1-2.c -o 1-2.s
+cat -n 1-2.s
+gcc 1-2.s -c
+file 1-2.o
+readelf -r 1-2.o
+man readelf
+readelf -a 1-2.o
+objdump -d 1-2.o
+cat 1-2.s
+gcc 1-2.o -o 1-2
+file 1-2
+ls -l
+readelf -a 1-2
+objdump -d 1-2
+
+
+
+./1-2
+time ./1-2
+time ./1-2.sh
+
+time ./1-2clear
+clear
+sleep 300|sleep 500&
+pgrep -l sleep
+ls /proc
+ll /proc/19750/fd
+ll /proc/19751/fd
+kill 19750
+kill 19751
+ls /proc/
