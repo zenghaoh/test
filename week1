@@ -1,0 +1,63 @@
+理论：
+1.现代操作系统
+2.操作系统设计与实现（电子工业）————linux3.0
+
+Linux——鸟哥的私房菜（入门）
+
+编程：
+unix系统编程
+unix操作系统设计
+unix/linux程序设计教程（2000/2013）
+
+内核 Linux内核设计与实现 Robert Lover
+注释分析：情景分析/0.11完全注释
+
+
+
+                         根目录               控制台       系统内存
+             home        user      proc---伪文件系统-------运行的进程      
+       week1      其他                                     内存的信息
+    code   note
+1-1.c  1-2.c   1-1.txt
+
+路径定位具体文件：绝对与相对
+
+      shell 命令解释口
+             |
+   命令行---命令名————path
+搜索路径---对应可执行文件
+
+派生子进程运行      Lnterprocess
+shell               Communication
+                     信号
+                     
+                     
+cd week1/
+cd code
+vim 1-1.c
+gcc -g 1-1.c -o 1-1
+gdb 1-1
+gcc -E 1-1.c> 1-1.i
+cat 1-1.i
+
+cat -n 1-1.i
+gcc -S 1-1.c > 1-1.s
+cat -n 1-1.s
+
+gcc-g -wall -v 1-1.c -o 1-1-1
+readelf 1-1-1
+readelf -l 1-1-1
+readelf -h 1-1-1
+objdump 1-1
+objdump -d 1-1
+objdump -d 1-1 > out.dat
+more out.dat
+cat 1-1.c
+cat 1-1.c >> out.dat
+cat out.dat
+gcc
+gcc 2>error.dat  //把错误信息放入error.dat
+cat error.dat    
+cat -n error.dat  
+   
+ 
